@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <TextView 
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtView"
-        android:hint="@string/txtViewHint"
-        />
-    <Button 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnText"
-        android:id="@+id/btn"
-        android:onClick="btnClick"
-        />
-    <CheckBox 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/chB"
-        />
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	>
+	<TextView 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:text="@string/txtViewHint"
+	    android:id="@+id/txtView"
+	    />
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    >
+	    <Button
+	        android:layout_height="wrap_content"	        
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="@string/btnOk"
+	        android:id="@+id/btnOk"
+	        android:onClick="btnOkClick"
+	        />	        
+	    
+	    <Button 
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="@string/btnCancell"
+	        android:id="@+id/btnCancell"
+	        android:onClick="btnCancellClick"
+	        />
+	</LinearLayout>
+	
 </LinearLayout>

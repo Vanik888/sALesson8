@@ -4,7 +4,8 @@
     <string name="app_name">sALesson8</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="btnText">Send</string>
+    <string name="btnOk">OK</string>
+    <string name="btnCancell">Cancell</string>
     <string name="txtViewHint">Enter your message</string>
 	
 </resources>

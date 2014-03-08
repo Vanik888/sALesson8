@@ -14,16 +14,15 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		TextView myTextView = (TextView) findViewById(R.id.txtView);
-		myTextView.setText("hello world");
-		Button myBtn = (Button) findViewById(R.id.btn);
-		myBtn.setText("Send)");
-		CheckBox myChB = (CheckBox) findViewById(R.id.chB);
-		myChB.setChecked(true);
+
 	}
-	public void btnClick(View view) {
-		TextView myTextView = (TextView) findViewById(R.id.txtView);
-		myTextView.setText("send");
+	public void btnOkClick(View view) {
+		TextView txtView = (TextView) findViewById(R.id.txtView);
+		txtView.setText("OkButton Clicked");				
+	}
+	public void btnCancellClick(View view) {
+		TextView txtView = (TextView) findViewById(R.id.txtView);
+		txtView.setText("Cancell Button clicked");
 	}
 
 	@Override
