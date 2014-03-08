@@ -22,17 +22,18 @@
 	        android:layout_weight="1"
 	        android:text="@string/btnOk"
 	        android:id="@+id/btnOk"
-	        android:onClick="btnOkClick"
 	        />	        
 	    
-	    <Button 
-	        android:layout_height="wrap_content"
-	        android:layout_width="0dp"
-	        android:layout_weight="1"
-	        android:text="@string/btnCancell"
+	    <Button
 	        android:id="@+id/btnCancell"
-	        android:onClick="btnCancellClick"
-	        />
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:background="@color/backgroundColor"
+	        android:text="@string/btnCancell" 
+	        /> 
+	        
+
 	</LinearLayout>
 	
 </LinearLayout>
