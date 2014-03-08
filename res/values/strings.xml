@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">sALesson8</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="btnOk">OK</string>
-    <string name="btnCancell">Cancell</string>
-    <string name="txtViewHint">Enter your message</string>
-	
+    <string name="plusSign">+</string>
+    <string name="divSign">/</string>
+    <string name="multSign">*</string>
+    <string name="diffSign">-</string>	
 </resources>
