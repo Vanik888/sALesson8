@@ -1,66 +1,52 @@
 package com.example.salesson8;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 
-public class MainActivity extends Activity implements View.OnClickListener {
-	private final static String loggerName = "myLogger";	
+public class MainActivity extends Activity{
 
-	public void onClick(View v) {
-		Log.d(loggerName, "all works");
-		Intent myIntent = new Intent(this, SecondActivity.class );
-		Log.d(loggerName, "starting second activity");
-		startActivity(myIntent);
-	}
-	@Override
-	protected void onCreate(Bundle bn) {
+	private final String ATTRIBUTE_NAME_TXT = "text";
+	private final String ATTRIBUTE_NAME_CHECKED = "checked";
+	private final String ATTRIBUTE_NAME_IMAGE = "image";
+	private ListView lv;
+	
+	public void onCreate(Bundle bn) {
 		super.onCreate(bn);
 		setContentView(R.layout.activity_main);
-		Button btn = (Button) findViewById(R.id.btnSend);
-		btn.setOnClickListener(this);
+		String[] arrTexts = {"hello", "main", "asfd", "hjklj", "loea"};
+		boolean[] arrCheckBox = { true, false, true, false, true};
+		int img = R.drawable.ic_launcher;
 		
-		Log.d(loggerName, "MainActivity: onCreate");	
+		ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>(
+				arrTexts.length);
+		Map<String, Object> m;
+		for (int i = 0 ; i < arrTexts.length; i++ ) {
+			m = new HashMap<String, Object>();
+			m.put(ATTRIBUTE_NAME_TXT, arrTexts[i]);
+			m.put(ATTRIBUTE_NAME_CHECKED, arrCheckBox[i]);
+			m.put(ATTRIBUTE_NAME_IMAGE, img);
+			data.add(m);
+		}
+		String[] from = { ATTRIBUTE_NAME_TXT, 
+					    ATTRIBUTE_NAME_CHECKED, 
+						ATTRIBUTE_NAME_IMAGE };
+		int[] to = { R.id.txtView, R.id.chBox, R.id.imageV};
 		
-	}
-	
-	@Override
-	protected void onStart() {
-		super.onStart();
-		Log.d(loggerName, "MainActivity: onStart");
-	}
-	
-	
-	@Override
-	protected void onResume() {
-		super.onResume();
-		Log.d(loggerName, "MainActivity: onResume");
-	}
-	
-	@Override
-	protected void onPause() {
-		super.onPause();
-		Log.d(loggerName, "MainActivity: onPause");
-	}
-	
-	@Override
-	protected void onStop() {
-		super.onStop();
-		Log.d(loggerName, "MainActivity: onStop");
-	}
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		Log.d(loggerName, "MainActiviy: onDestroy");
-	}
-	@Override
-	protected void onRestart() {
-		super.onRestart();
-		Log.d(loggerName, "MainActivity: onRestart");
+		SimpleAdapter sAdapter = new SimpleAdapter(this, data, 
+								R.layout.item,
+								from, to);
+		lv = (ListView) findViewById(R.id.listView);
+		lv.setAdapter(sAdapter);
+		
+				
+		
 	}
 
 }

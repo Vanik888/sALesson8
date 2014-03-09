@@ -22,11 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.salesson8.SecondActivity"
-            android:label="@string/title_activity_second" 
-            android:theme="@android:style/Theme.Dialog">
-        </activity>
+
     </application>
 
 </manifest>
