@@ -1,42 +1,42 @@
 package com.example.salesson8;
 
-import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.Toast;
-
+import android.widget.TextView;
 
 public class MainActivity extends Activity{
-	private ArrayList<Product> productList = new ArrayList<Product>();
-	private MyBoxAdapter myAdapter;
+//	private Handler handler;
+	private TextView tvInfo;
+	private static final String logger = "myLogger";
 	
-	@Override
-	public void onCreate(Bundle bnl) {
-		super.onCreate(bnl);
+	public void onCreate(Bundle bn) {
+		super.onCreate(bn);
 		setContentView(R.layout.activity_main);
-		
-		fillData();
-		myAdapter = new MyBoxAdapter(this, productList);
-		
-		ListView lvMain = (ListView) findViewById(R.id.lvMain);
-		lvMain.setAdapter(myAdapter);
+		tvInfo = (TextView) findViewById(R.id.tvInfo);		
 	}
-	public void fillData() {
-		for (int i = 0; i <= 20 ; i++) {
-			productList.add(new Product(R.drawable.ic_launcher, "Product" + i, i*1000, false));		
+	public void onClick1(View v) {
+		if (v.getId() == R.id.btnStart) {
+			for (int i = 0; i <= 10 ; i++) {				
+				downloading();
+				Log.d(logger, "Downloadint file: " + i);
+				tvInfo.setText("Downloading file: " + i);
+			}
+		}
+		if (v.getId() == R.id.btnTest) {
+			Log.d(logger, "test");
+
+		}		
+	}
+	public void downloading() {
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
-	public void showResult(View v) {
-		String result = "Your ordered things:\n";
-		for(Product p : myAdapter.getBox()) {
-			if (p.getBox()) {
-				result += p.getName()+"\n";
-			}			
-		}
-		Toast.makeText(this, result, Toast.LENGTH_LONG).show();
-	}
-	
 }
