@@ -28,9 +28,9 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f090003;
-        public static final int btnStart=0x7f090001;
-        public static final int btnTest=0x7f090002;
-        public static final int tvInfo=0x7f090000;
+        public static final int btnConnect=0x7f090000;
+        public static final int pbConnect=0x7f090002;
+        public static final int tvStatus=0x7f090001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -42,9 +42,8 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int connect=0x7f060003;
         public static final int hello_world=0x7f060002;
-        public static final int start=0x7f060003;
-        public static final int test=0x7f060004;
     }
     public static final class style {
         /** 
