@@ -6,19 +6,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends Activity{	
+public class MainActivity extends Activity {
 	private final String logger = "myLogger";
+	private final String[] arrString = {"asdfsd", "sfhj", "shjh", "kjlj"};
 	private TextView tvInfo;
 	private MyTask myTask;
-	public void onCreate(Bundle bn) {
+	@Override
+	protected void onCreate(Bundle bn) {
 		super.onCreate(bn);
 		setContentView(R.layout.activity_main);
-	}
-	public void onClick(View v) {
 		tvInfo = (TextView) findViewById(R.id.tvInfo);
 		myTask = new MyTask(tvInfo);
-		Log.d(logger, "Starting new AsyncTask");
-		myTask.execute();
 		
+	}
+	public void onClick(View v) {
+		Log.d(logger, "onClick clicked");
+		myTask.execute(arrString);
 	}
 }
