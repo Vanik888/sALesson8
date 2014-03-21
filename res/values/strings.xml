@@ -3,5 +3,10 @@
 
     <string name="app_name">sALesson8</string>
     <string name="action_settings">Settings</string>
-	<string name="start">Start</string>
+	<string name="toSecondActivity">Start Second Activity</string>
+    <string name="addSign">+</string>
+    <string name="difSign">-</string>
+    <string name="multSign">*</string>
+    <string name="devideSign">/</string>
+
 </resources>
