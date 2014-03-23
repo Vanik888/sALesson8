@@ -8,5 +8,5 @@
     <string name="difSign">-</string>
     <string name="multSign">*</string>
     <string name="devideSign">/</string>
-
+    <string name="btnClear">clear</string>
 </resources>
