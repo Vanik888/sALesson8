@@ -4,9 +4,9 @@
     <string name="app_name">sALesson8</string>
     <string name="action_settings">Settings</string>
 	<string name="toSecondActivity">Start Second Activity</string>
-    <string name="addSign">+</string>
-    <string name="difSign">-</string>
-    <string name="multSign">*</string>
-    <string name="devideSign">/</string>
-    <string name="btnClear">clear</string>
+    <string name="item1">item1</string>
+    <string name="item2">item2</string>
+    <string name="item3">item3</string>
+    <string name="item4">item4</string>
+    <string name="hello_world">hello world</string>
 </resources>
